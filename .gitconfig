@@ -1,0 +1,41 @@
+[user]
+    name = ohowells
+    email = ohowells1@gmail.com
+[core]
+    editor = vim
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[alias]
+    ad = add .
+    st = status
+    cm = commit -m
+    co = checkout
+    cb = checkout -b
+    br = branch
+    pso = push origin
+    psom = push origin master
+    lg = log --oneline
+    lol = log --oneline --graph --decorate
+
+    ls = ls-files
+
+    undo = reset HEAD~1 --mixed
+    amend = commit -a --amend
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+
+    # Unstage changes from the index
+    unstage = reset HEAD --
