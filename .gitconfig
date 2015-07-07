@@ -26,8 +26,9 @@
     co = checkout
     cb = checkout -b
     br = branch
+    ra = remote add
     pso = push origin
-    psom = push origin master
+    psom = push -u  origin master
     lg = log --oneline
     lol = log --oneline --graph --decorate
 
