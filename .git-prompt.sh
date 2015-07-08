@@ -251,9 +251,9 @@ __git_ps1_colorize_gitstring ()
 
 	local branch_color=""
 	if [ $detached = no ]; then
-		branch_color="$ok_color"
+		branch_color=""
 	else
-		branch_color="$bad_color"
+		branch_color=""
 	fi
 	c="$branch_color$c"
 
@@ -299,7 +299,7 @@ __git_ps1 ()
 	local detached=no
 	local ps1pc_start='\u@\h:\w '
 	local ps1pc_end='\$ '
-	local printf_format=' (%s)'
+	local printf_format='(%s)'
 
 	case "$#" in
 		2|3)	pcmode=yes

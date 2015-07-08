@@ -5,10 +5,6 @@
     editor = vim
 [color]
     ui = auto
-[color "branch"]
-    current = yellow bold
-    local = green bold
-    remote = cyan bold
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
@@ -29,8 +25,8 @@
     ra = remote add
     pso = push origin
     psom = push -u  origin master
-    lg = log --oneline
-    lol = log --oneline --graph --decorate
+
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
     ls = ls-files
 
