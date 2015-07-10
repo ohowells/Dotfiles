@@ -9,6 +9,19 @@ source ~/.git-prompt.sh
 
 alias ls='ls --color=auto'
 alias lsa='ls -a'
+alias update='sudo pacman -Syu'
+alias reboot='sudo reboot'
+alias poweroff='sudo poweroff'
+
+# A quick way to get out of current directory
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+ 
+
 
 # Variables from git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
