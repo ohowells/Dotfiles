@@ -188,15 +188,15 @@ __git_ps1_show_upstream ()
 	if [[ -z "$verbose" ]]; then
 		case "$count" in
 		"") # no upstream
-			p="" ;;
+			p="i " ;;
 		"0	0") # equal to upstream
-			p="=" ;;
+			p=" =" ;;
 		"0	"*) # ahead of upstream
-			p=">" ;;
+			p=" >" ;;
 		*"	0") # behind upstream
-			p="<" ;;
+			p=" <" ;;
 		*)	    # diverged from upstream
-			p="<>" ;;
+			p=" <>" ;;
 		esac
 	else
 		case "$count" in
@@ -243,10 +243,12 @@ __git_ps1_colorize_gitstring ()
 		local c_red='\[\e[31m\]'
 		local c_green='\[\e[32m\]'
 		local c_lblue='\[\e[1;34m\]'
+        local c_yellow='\e[0;33m'
 		local c_clear='\[\e[0m\]'
 	fi
 	local bad_color=$c_red
 	local ok_color=$c_green
+    local mod_color=$c_yellow
 	local flags_color="$c_lblue"
 
 	local branch_color=""
@@ -258,8 +260,8 @@ __git_ps1_colorize_gitstring ()
 	c="$branch_color$c"
 
 	z="$c_clear$z"
-	if [ "$w" = "*" ]; then
-		w="$bad_color$w"
+	if [ "$w" = " *" ]; then
+		w="$mod_color$w"
 	fi
 	if [ -n "$i" ]; then
 		i="$ok_color$i"
