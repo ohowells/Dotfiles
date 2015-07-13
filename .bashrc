@@ -13,6 +13,9 @@ alias update='sudo pacman -Syu'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 
+# '[r]emove [o]rphans' - recursively remove ALL orphaned packages
+alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
+
 # A quick way to get out of current directory
 alias .='cd ..'
 alias ..='cd ../../'
