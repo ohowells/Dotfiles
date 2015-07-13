@@ -22,9 +22,12 @@
     co = checkout
     cb = checkout -b
     br = branch
+    or = origin
     ra = remote add
-    pso = push origin
-    psom = push -u  origin master
+    rao = remote add origin
+    pu = push
+    pso = push -u origin
+    psom = push -u origin master
 
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
