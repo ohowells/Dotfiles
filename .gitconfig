@@ -3,8 +3,10 @@
     email = ohowells1@gmail.com
 [core]
     editor = vim
+[merge]
+    tool = vimdiff
 [color]
-    ui = auto
+    ui = true
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
@@ -30,6 +32,7 @@
     psom = push -u origin master
 
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lc = log -1 HEAD
 
     ls = ls-files
 
@@ -37,5 +40,4 @@
     amend = commit -a --amend
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 
-    # Unstage changes from the index
     unstage = reset HEAD --
