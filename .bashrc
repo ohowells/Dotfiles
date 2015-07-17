@@ -10,6 +10,7 @@ source ~/.git-prompt.sh
 alias ls='ls --color=auto'
 alias lsa='ls -a'
 alias update='sudo pacman -Syu'
+alias remove='sudo pacman -R'
 alias install='sudo pacman -S'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
